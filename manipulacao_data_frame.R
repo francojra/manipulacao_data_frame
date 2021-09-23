@@ -1,20 +1,32 @@
 
 # Como criar nova coluna em um data.frame --------------------------------------------------------------------------------------------------
 
-### Criando um data.frame
+### Criando dois data.frames
 
-Turma_1 <- c(9, 7, 5, 8, 10)
-Turma_2 <- c(8, 8, 9, 3, 6)
+Notas_turma_1 <- c(9, 7, 5, 8, 10)
+Alunos <- c("Joao", "Maria", "Augusto", "Pedro", "Paula")
 
-dados <- data.frame(Turma_1, Turma_2)
+dados <- data.frame(Notas_turma_1, Alunos)
 dados
+
+Notas_turma_2 <- c(7, 4, 9, 8, 6)
+Alunos <- c("Ana", "Gabriel", "Artur", "Valentina", "Vanessa")
+
+dados1 <- data.frame(Notas_turma_2, Alunos)
+dados1
 
 ### Criando nova coluna "Condicao" com dados associados a outras colunas da sua tabela:
 
-CondicaoT1 <- dados$Turma_1 >= '7'
-dados[CondicaoT1, "Condiçao T1"] <- "Aprovado"
-
-CondicaoT2 <- dados$Turma_2 < '7'
-dados[CondicaoT2, "Condiçao T2"] <- "Reprovado"
+# Condição turma 1
+Condicao_turma_1 <- dados$Notas_turma_1 >= '7'
+dados[Condicao_turma_1, "Condiçao T1"] <- "Aprovado"
+Condicao_turma_1 <- dados$Notas_turma_2 < '7'
+dados[Condicao_turma_1, "Condiçao T2"] <- "Reprovado"
+Condicao_turma_2 <- dados1$Notas_turma_1 >= '7'
+dados[Condicao_turma_2, "Condiçao T1"] <- "Aprovado"
+Condicao_turma_2 <- dados1$Notas_turma_2 < '7'
+dados1[Condicao_turma_2, "Condiçao T2"] <- "Reprovado"
 
 dados
+
+dados1
