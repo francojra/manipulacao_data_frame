@@ -26,6 +26,8 @@ dados[Condicao_turma_1, "Condicao_turma_1"] <- "Reprovado"
 dados
 
 # Condição turma 2
+Condicao_turma_2 <- dados1$Notas_turma_2 >= '7'
+dados1[Condicao_turma_2, "Condicao_turma_2"] <- "Aprovado"
 Condicao_turma_2 <- dados1$Notas_turma_2 < '7'
 dados1[Condicao_turma_2, "Condicao_turma_2"] <- "Reprovado"
 
